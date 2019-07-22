@@ -51,7 +51,7 @@ class Books extends CI_Controller {
 		$this->booksModel->addBooks();
 		// $this->load->view('bookForm');
 
-		return redirect('http://localhost/ci/books/index');
+		return redirect('/books/index');
 	}
 
 	public function edit()
@@ -59,7 +59,7 @@ class Books extends CI_Controller {
 		$this->load->model('booksModel');
 		$this->booksModel->editBooks();
 
-		return redirect('http://localhost/ci/books/index');
+		return redirect('/books/index');
 		// $this->load->view('bookForm');
 		// echo "This is Edit ".$id;
 	}
@@ -70,6 +70,6 @@ class Books extends CI_Controller {
 		$this->load->model('booksModel');
 		$data['datas'] = $this->booksModel->deleteBooks($id);
 		// $this->load->view('books', $data);
-		return redirect('http://localhost/ci/books/index');
+		return redirect('/books');
 	}
 }

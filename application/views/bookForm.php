@@ -4,7 +4,7 @@
 	<title>Form Buku</title>
 </head>
 <body>
-	<form method="POST" action="/ci/books/<?php if(isset($data['id'])){echo "edit";}else{echo "add";} ?>">
+	<form method="POST" action="/books/<?php if(isset($data['id'])){echo "edit";}else{echo "add";} ?>">
 		<?php if (isset($data['id'])) { ?>
 		<input type="text" name="id" value="<?php echo $data['id']?>" readonly>
 		<input type="text" name="judul" value="<?php echo $data['judul']?>">
