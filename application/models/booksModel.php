@@ -12,7 +12,7 @@ class BooksModel extends CI_Model
 		require 'vendor/autoload.php';
 
 		$this->_client = new Client([
-			'base_uri' => 'http://localhost:8080'
+			'base_uri' => 'https://26d19814.ngrok.io/'
 		]);
 		$response = $this->_client->request('GET', 'buku');
 		$this->_data = json_decode($response->getBody()->getContents())->data;
